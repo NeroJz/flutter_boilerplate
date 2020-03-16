@@ -18,9 +18,9 @@ or MVC will be implemented as the development is progressing.
 - After installing the Dart and Flutter SDK, you can run
   the project via Visual Code or Android studio, or
 - Navigate to the project and in terminal run:
-  '''
+  ```
   flutter run
-  '''
+  ```
 
 # Credits
 
