@@ -1,5 +1,5 @@
 
-import 'package:fl_boilerplate/constants/Constants.dart';
+import 'package:fl_boilerplate/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class ButtonSolid extends StatelessWidget {
@@ -16,23 +16,23 @@ class ButtonSolid extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: onPressed,
-      fillColor: Constants.primary,
-      splashColor: Constants.light_grey,
+      fillColor: kPrimaryColor,
+      splashColor: kLightGreyColor,
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Constants.white,
-            width: Constants.border_width,
+            color: kWhiteColor,
+            width: kBorderWidth,
           ),
         ),
-        width: Constants.btn_width,
-        height: Constants.btn_height,
+        width: kBtnWidth,
+        height: kBtnHeight,
         child: Center(
           child: Text(
             text,
             style: TextStyle(
-              color: Constants.white,
-              fontSize: Constants.btn_font_size,
+              color: kWhiteColor,
+              fontSize: kBtnFontsize,
             ),
           ),
         ),

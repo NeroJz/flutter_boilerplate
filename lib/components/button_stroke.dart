@@ -1,4 +1,5 @@
-import 'package:fl_boilerplate/constants/Constants.dart';
+
+import 'package:fl_boilerplate/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,22 +17,22 @@ class ButtonStroke extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: onPressed,
-      fillColor: Constants.white,
+      fillColor: kWhiteColor,
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(
-            color: Constants.primary,
-            width: Constants.border_width,
+            color: kPrimaryColor,
+            width: kBorderWidth,
           ),
         ),
-        width: Constants.btn_width,
-        height: Constants.btn_height,
+        width: kBtnWidth,
+        height: kBtnHeight,
         child: Center(
           child: Text(
             text,
             style: TextStyle(
-              color: Constants.primary,
-              fontSize: Constants.btn_font_size,
+              color: kPrimaryColor,
+              fontSize: kBtnFontsize,
             ),
           ),
         ),
