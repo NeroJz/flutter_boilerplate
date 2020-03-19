@@ -12,7 +12,7 @@ class FreeMemberRegistrationPage extends StatelessWidget {
       body: Container(
         child: Center(
           child: Text(
-              'Free member registration'
+              'Free member registration2'
           ),
         ),
       ),
