@@ -2,6 +2,7 @@ import 'package:fl_boilerplate/app/app.dart';
 import 'package:fl_boilerplate/app/app_state.dart';
 import 'package:fl_boilerplate/components/button_solid.dart';
 import 'package:fl_boilerplate/components/button_stroke.dart';
+import 'package:fl_boilerplate/screens/free_member/FreeMemberRegistration.dart';
 import 'package:fl_boilerplate/screens/home.dart';
 import 'package:fl_boilerplate/utilities/constants.dart';
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
+//        home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: FreeMemberRegistrationPage(),
       ),
     );
   }
