@@ -1,8 +1,12 @@
+import 'package:fl_boilerplate/app/app.dart';
+import 'package:fl_boilerplate/app/app_state.dart';
 import 'package:fl_boilerplate/components/button_solid.dart';
 import 'package:fl_boilerplate/components/button_stroke.dart';
+import 'package:fl_boilerplate/screens/home.dart';
 import 'package:fl_boilerplate/utilities/constants.dart';
 
 import 'package:flutter/material.dart';
+import 'package:global_configuration/global_configuration.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,20 +14,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: kBodyColor,
-        textTheme: TextTheme(
-          body1: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.normal,
-            color: kGreenColor,
+    return App(
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: kBodyColor,
+          textTheme: TextTheme(
+            body1: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.normal,
+              color: kBlackColor,
+            ),
           ),
         ),
+        home: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -87,19 +93,31 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-            ButtonSolid(
-              onPressed: () {
-                print("hello world");
-              },
-              text: 'Button Text',
+            Text(
+              AppState.of(context, aspect: AppStateAspect.lang)
+                  .value
+                  .language('Homepage_message_popup'),
             ),
-
+            Container(
+              height: 5.0,
+            ),
             ButtonStroke(
               onPressed: () {
-                print("hello world");
+                appController.setLang(lang: 'zh');
               },
-              text: 'Button Text',
+              text: "Trigger App",
+            ),
+            Container(
+              height: 5.0,
+            ),
+            ButtonStroke(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              text: "Screen 1",
             ),
           ],
         ),
@@ -107,5 +125,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-

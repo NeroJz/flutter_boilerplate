@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+// Language file
+const String kZHLanguageFile = 'assets/lang/zh/lang.json';
+const String kENLanguageFile = 'assets/lang/en/lang.json';
+
+
 // COLORS
 const Color kPrimaryColor = const Color(0xFFDA281C);
 const Color kSecondaryColor = const Color(0xFFFF671E);
