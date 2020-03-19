@@ -17,6 +17,8 @@ const Color kOrangeColor = const Color(0xFFF5A623);
 const Color kRedColor = const Color(0xFFCD5C5C);
 const Color kWhiteColor = const Color(0xFFFFFFFF);
 
+// Margin & Spacing
+const double kBodyMargin = 15.0;
 
 // Font Size
 const double kBtnFontsize = 14.0;
